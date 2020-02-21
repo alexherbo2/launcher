@@ -30,7 +30,7 @@ launcher-run $(launcher-list | fzf)
 **Example** – Same with [Alacritty]:
 
 ``` sh
-alacritty --command sh -c 'launcher-run $(launcher-list | fzf)'
+alacritty --command sh -c 'nohup launcher-run $(launcher-list | fzf) > /dev/null'
 ```
 
 [Crystal]: https://crystal-lang.org
