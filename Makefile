@@ -3,10 +3,10 @@ build:
 
 install: build
 	mkdir -p ~/.local/bin
-	ln -sf "${PWD}/bin/launcher-list" "${PWD}/bin/launcher-run" ~/.local/bin
+	ln -sf "${PWD}/bin/launcher" ~/.local/bin
 
 uninstall:
-	rm -f ~/.local/bin/launcher-list ~/.local/bin/launcher-run
+	rm -f ~/.local/bin/launcher
 
 clean:
 	rm -Rf bin

@@ -2,7 +2,5 @@ name: launcher
 version: 0.1.0
 license: Unlicense
 targets:
-  launcher-list:
-    main: src/launcher/commands/list.cr
-  launcher-run:
-    main: src/launcher/commands/run.cr
+  launcher:
+    main: src/cli.cr

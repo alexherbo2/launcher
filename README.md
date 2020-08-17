@@ -15,8 +15,7 @@ A simple application launcher with no GUI.
 ## Installation
 
 ``` sh
-make build # Build bin/launcher-list and bin/launcher-run.
-make install # Install bin into ~/.local/bin.
+make install
 ```
 
 ## Usage
@@ -24,13 +23,13 @@ make install # Install bin into ~/.local/bin.
 **Example** – Run with [fzf]:
 
 ``` sh
-launcher-run $(launcher-list | fzf)
+launcher run $(launcher menu | fzf)
 ```
 
 **Example** – Same with [Alacritty]:
 
 ``` sh
-alacritty --command sh -c 'setsid launcher-run $(launcher-list | fzf) < /dev/null > /dev/null 2>&1'
+alacritty --command sh -c 'setsid launcher run $(launcher menu | fzf) < /dev/null > /dev/null 2>&1'
 ```
 
 [Crystal]: https://crystal-lang.org
