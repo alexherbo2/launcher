@@ -23,13 +23,13 @@ make install
 **Example** – Run with [fzf]:
 
 ``` sh
-launcher run $(launcher menu | fzf)
+launcher menu | fzf | xargs launcher run --
 ```
 
 **Example** – Same with [Alacritty]:
 
 ``` sh
-alacritty --command sh -c 'setsid launcher run $(launcher menu | fzf) < /dev/null > /dev/null 2>&1'
+alacritty --command sh -c 'launcher menu | fzf | xargs setsid launcher run --'
 ```
 
 [Crystal]: https://crystal-lang.org
