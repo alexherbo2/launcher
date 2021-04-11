@@ -1,8 +1,8 @@
 # Launcher
 
-[![IRC](https://img.shields.io/badge/IRC-%23launcher-blue)](https://webchat.freenode.net/#launcher)
+<img src="https://github.com/FortAwesome/Font-Awesome/raw/master/svgs/solid/rocket.svg" height="16" align="right">
 
-A simple application launcher with no GUI.
+Launch applications with a dynamic menu program.
 
 ## Features
 
@@ -12,6 +12,8 @@ A simple application launcher with no GUI.
 
 - [Crystal]
 
+[Crystal]: https://crystal-lang.org
+
 ## Installation
 
 ``` sh
@@ -20,18 +22,18 @@ make install
 
 ## Usage
 
-**Example** – Run with [fzf]:
-
 ``` sh
-launcher menu | fzf | xargs launcher run --
+launcher menu | dmenu | xargs launcher run --
 ```
 
-**Example** – Same with [Alacritty]:
+[Sway] example configuration:
 
-``` sh
-alacritty --command sh -c 'launcher menu | fzf | xargs setsid launcher run --'
+```
+# Note: Pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $launcher launcher menu | dmenu | xargs swaymsg exec launcher run --
+
+bindsym $mod+Shift+Return exec $launcher
 ```
 
-[Crystal]: https://crystal-lang.org
-[fzf]: https://github.com/junegunn/fzf
-[Alacritty]: https://github.com/alacritty/alacritty
+[Sway]: https://swaywm.org
